@@ -1,13 +1,20 @@
 <script setup>
 import TaskItem from '../components/TaskItem.vue';
 
-let todos = [{name: "постирать"}, {name: "сходить в магазин"}];
+const props = defineProps({
+  todos: Array,
+});
 </script>
 
 <template>
-  <TaskItem v-for="todo in todos" :todo="todo"/>
+  <div class="list">
+    <TaskItem v-for="todo in props.todos" :todo="todo"/>
+  </div>
 </template>
 
 <style scoped>
-
+.list {
+  padding: 10px;
+  background-color: lightyellow;
+}
 </style>
