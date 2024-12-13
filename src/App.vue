@@ -1,9 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
+import TodoPage from './page/TodoPage.vue';
 </script>
 
 <template>
-  <HelloWorld />
+  <TodoPage />
 </template>
 
 <style scoped></style>
