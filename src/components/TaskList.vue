@@ -9,6 +9,8 @@ const props = defineProps({
 <template>
   <div class="list">
     <TaskItem v-for="todo in props.todos" :todo="todo"/>
+    <h2> {{ todos }} </h2>
+
   </div>
 </template>
 

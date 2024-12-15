@@ -11,6 +11,10 @@ const createTodo = (taskName) => {
   let newTask = {name: taskName, type: false}
   todos.value.push(newTask)
 }
+
+const changeTodo = (todo) => {
+  todos.value
+}
 </script>
 
 <template>

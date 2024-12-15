@@ -4,7 +4,7 @@ const props = defineProps({
   todo: Object,
 });
 
-const changeType = (todo) => {
+const changeCompletedHandler = (todo) => {
   todo.type = !todo.type;
 };
 </script>
@@ -13,10 +13,9 @@ const changeType = (todo) => {
   <div class="task">
     <input type="checkbox"
            :checked="props.todo.type"
-           @change="changeType(props.todo)"
+           @change="changeCompletedHandler(props.todo)"
     />
     <h2> {{ props.todo.name }} </h2>
-    <h2> {{ todo }} </h2>
   </div>
 </template>
 
