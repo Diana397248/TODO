@@ -5,14 +5,14 @@ const props = defineProps({
 });
 
 const changeCompletedHandler = (todo) => {
-  todo.type = !todo.type;
+  todo.completed = !todo.completed;
 };
 </script>
 
 <template>
   <div class="task">
     <input type="checkbox"
-           :checked="props.todo.type"
+           :checked="props.todo.completed"
            @change="changeCompletedHandler(props.todo)"
     />
     <h2> {{ props.todo.name }} </h2>

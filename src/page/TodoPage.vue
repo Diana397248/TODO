@@ -3,12 +3,16 @@ import TaskList from '../components/TaskList.vue';
 import TaskForm from '../components/TaskForm.vue';
 import {ref} from "vue";
 
-const todos = ref([{
-  name: "постирать", type: false
-}, {name: "сходить в магазин", type: false}]);
+
+const todos = ref([
+  {id: 1, name: "постирать", completed: false},
+  {id: 2, name: "сходить в магазин", completed: false}]);
+
+let lastId = 2
 
 const createTodo = (taskName) => {
-  let newTask = {name: taskName, type: false}
+  lastId += 1;
+  let newTask = {id: lastId, name: taskName, completed: false}
   todos.value.push(newTask)
 }
 
