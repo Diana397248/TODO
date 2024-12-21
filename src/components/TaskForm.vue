@@ -11,6 +11,7 @@ const createFormHandler = () => {
   props.createTodo(nameTask.value);
   nameTask.value = '';
 }
+
 </script>
 
 <template>
